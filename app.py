@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify,render_template
 import pickle
 import praw 
 import urllib.parse
-import model
 import json
 #cleaning
 import nltk 
