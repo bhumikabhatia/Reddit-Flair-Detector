@@ -35,7 +35,7 @@ import pickle
 #uploaded = files.upload()
 
 import io
-df = pd.read_csv('C:/Users/Bhumika Bhatia/Desktop/Flare detector/finalmodeldata2.csv')
+df = pd.read_csv('./finalmodeldata2.csv')
 #df.head()
 
 #categorical labels to numeric values 
