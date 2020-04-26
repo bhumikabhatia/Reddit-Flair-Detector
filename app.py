@@ -10,7 +10,7 @@ import string
 from nltk.corpus import stopwords 
 from nltk.tokenize import word_tokenize
 import re
-
+import os
 app = Flask(__name__)
 model = pickle.load(open('model.pkl','rb'))
 #credentials to scrape
@@ -153,4 +153,6 @@ def automated_testing():
             x[link] = predicted_flair #the link 
         return json.dumps(x)
 if __name__ == "__main__":
-    app.run(debug=False)
+    #app.run(debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
