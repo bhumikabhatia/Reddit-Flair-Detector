@@ -6,7 +6,7 @@ import json
 #cleaning
 import nltk 
 import string 
-from nltk.corpus import stopwords 
+#from nltk.corpus import stopwords 
 from nltk.tokenize import word_tokenize
 import re
 import os
@@ -33,7 +33,7 @@ def geturl(URL):
 
     sub = ['jpg','png','reddit.com/comments']
     #function which cleans the URL and extracts important info 
-    stop_w = stopwords.words('english')
+    #stop_w = stopwords.words('english')
     def clean_url(url):
       #if it is an image or no URL which directs to another site
       if any(x in url for x in sub):
@@ -58,7 +58,7 @@ def geturl(URL):
       #remove punctuation
       for word in words:
         new_word = re.sub(r'[^\w\s]', '', word)
-        if new_word != '' and new_word not in stop_w:#remove stop words
+        if new_word != '' :#and new_word not in stop_w:#remove stop words
             new_words.append(new_word)
       return new_words
       #lowercase text - already done in models
@@ -95,7 +95,7 @@ def predict():
     #need a substring list  
     sub = ['jpg','png','reddit.com/comments']
     #function which cleans the URL and extracts important info 
-    stop_w = stopwords.words('english')
+    #stop_w = stopwords.words('english')
     def clean_url(url):
       #if it is an image or no URL which directs to another site
       if any(x in url for x in sub):
@@ -119,7 +119,7 @@ def predict():
       #remove punctuation
       for word in words:
         new_word = re.sub(r'[^\w\s]', '', word)
-        if new_word != '' and new_word not in stop_w:#remove stop words
+        if new_word != '': #and new_word not in stop_w:#remove stop words
             new_words.append(new_word)
       return new_words
       #lowercase text - already done in models
