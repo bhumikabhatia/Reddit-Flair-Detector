@@ -7,8 +7,8 @@ import json
 #cleaning
 import nltk 
 import string 
-from nltk.corpus import stopwords 
-from nltk.tokenize import word_tokenize
+from nltk.corpus #import stopwords 
+from nltk.tokenize #import word_tokenize
 import re
 
 app = Flask(__name__)
