@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Reddit Flair Detector</title>
+</head>
+
+<body style="background:#FF8C00;">
+ <div class="login">
+	<h1>Automated Testing</h1>
+    
+    <form action="{{url_for('automated_testing')}}">
+        <input type="file" id="myFile" name="myFile">
+        <input type="submit">
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
