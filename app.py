@@ -6,7 +6,7 @@ import json
 #cleaning
 import nltk 
 import string 
-#from nltk.corpus import stopwords 
+from nltk.corpus import stopwords 
 from nltk.tokenize import word_tokenize
 import re
 import os
@@ -95,7 +95,7 @@ def predict():
     #need a substring list  
     sub = ['jpg','png','reddit.com/comments']
     #function which cleans the URL and extracts important info 
-    #stop_w = stopwords.words('english')
+    stop_w = stopwords.words('english')
     def clean_url(url):
       #if it is an image or no URL which directs to another site
       if any(x in url for x in sub):
