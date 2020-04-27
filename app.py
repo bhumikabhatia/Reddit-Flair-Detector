@@ -76,7 +76,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     home = request.form.get('home')
-    home = str(home)
+    #home = str(home)
     #return home
     #extract - title, comments, body, URL from post
     ypost = reddit.submission(url=home)
