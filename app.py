@@ -79,10 +79,9 @@ def predict():
     #home = str(home)
     #return home
     #extract - title, comments, body, URL from post
+    if (home.find('https://www.reddit.com/r/india/comments/')==-1): #check to make sure valid URL that is in Reddit India
+      return 'Error! Please enter a valid URL within subreddit india'
     ypost = reddit.submission(url=home)
-    if ypost.subreddit.display_name!='india':
-        #print enter a post within Indian subreddit
-        return 'Error! Please enter a URL within subreddit india'
     topcomments=''
     ypost.comments.replace_more(limit=0) #we only want top comments
     for comment in ypost.comments:
