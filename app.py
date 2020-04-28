@@ -14,8 +14,8 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl','rb'))
 #credentials to scrape
 reddit = praw.Reddit(client_id='LkYS254yTjMAQA',
-                     client_secret='4P7UVqqy9DuIkf9ufAvMBpXuyyY',
-                     password='Tiger@1lemon',
+                     client_secret='##',
+                     password='##',
                     user_agent='Build a flare detector.',
                     username='bhumika603')
 
@@ -133,9 +133,6 @@ def predict():
     #prediction = x[prediction[0]]
     #le = pickle.load(open('LabelEn.pkl','rb'))
     #x = list(le.inverse_transform(prediction))
-    #name = stuff['name']
-    #age = stuff['age']
-    #prediction = 0.6
 
     return render_template('./index.html',prediction_text = "The predicted flair is {}.".format(prediction[0]))
 
