@@ -12,8 +12,8 @@ Original file is located at
 import praw #wrapper for scrapping reddit data
 #credentials to scrape
 reddit = praw.Reddit(client_id='LkYS254yTjMAQA',
-                     client_secret='4P7UVqqy9DuIkf9ufAvMBpXuyyY',
-                     password='Tiger@1lemon',
+                     client_secret='##',
+                     password='##',
                      user_agent='Build a flare detector.',
                      username='bhumika603')
 
