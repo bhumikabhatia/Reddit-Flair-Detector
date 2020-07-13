@@ -13,11 +13,11 @@ import os
 app = Flask(__name__)
 model = pickle.load(open('model.pkl','rb'))
 #credentials to scrape
-reddit = praw.Reddit(client_id='LkYS254yTjMAQA',
+reddit = praw.Reddit(client_id='##',
                      client_secret='##',
                      password='##',
                     user_agent='Build a flare detector.',
-                    username='bhumika603')
+                    username='##')
 
 def geturl(URL):
     #return home
