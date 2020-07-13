@@ -11,11 +11,11 @@ Original file is located at
 
 import praw #wrapper for scrapping reddit data
 #credentials to scrape
-reddit = praw.Reddit(client_id='LkYS254yTjMAQA',
+reddit = praw.Reddit(client_id='##',
                      client_secret='##',
                      password='##',
                      user_agent='Build a flare detector.',
-                     username='bhumika603')
+                     username='##')
 
 import pandas as pd
 import numpy as np
